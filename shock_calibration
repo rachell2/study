@@ -8,3 +8,14 @@ Dim fillRange As Range
 Set fillRange = ws.Range(startCell, ws.Cells(nPointsSub + startPos - 1, 12 + i + 1))
  
 startCell.AutoFill Destination:=fillRange
+
+
+Dim ws As Worksheet
+Set ws = Sheets("Analysis MaxMin")
+
+Dim copyRange As Range
+Set copyRange = ws.Range( _
+    ws.Cells(startPos, 10 + i + 2), _
+    ws.Cells(nPointsSub + startPos - por - 1, 10 + i + 2))
+
+copyRange.Copy
